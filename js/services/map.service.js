@@ -3,7 +3,7 @@
 export const mapService = {
     initMap,
     addMarker,
-    panTo,
+    panTo
 }
 
 var gMap;
@@ -20,36 +20,9 @@ function initMap(lat = 32.0749831, lng = 34.9120554) {
             })
             addMapListener()
             console.log('Map!', gMap);
+            
         })
 }
-
-
-function addMapListener() {
-    const myLatLng = { lat: -25.363, lng: 131.044 };
-    var infoWindow = new google.maps.InfoWindow({
-        content: "Click the map to get Lat/Lng!",
-        position: myLatLng,
-      });
-    
-      infoWindow.open(gMap);
-      // Configure the click listener.
-      gMap.addListener("click", (mapsMouseEvent) => {
-        // Close the current InfoWindow.
-        infoWindow.close();
-        // Create a new InfoWindow.
-        infoWindow = new google.maps.InfoWindow({
-          position: mapsMouseEvent.latLng,
-        });
-        infoWindow.setContent(
-          JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
-        );
-        infoWindow.open(gMap);
-      });
-}
-
-
-
-
 
 function addMarker(loc) {
     var marker = new google.maps.Marker({
@@ -69,7 +42,7 @@ function panTo(lat, lng) {
 
 function _connectGoogleApi() {
     if (window.google) return Promise.resolve()
-    const API_KEY = 'AIzaSyDzJXpWOEWnDvgDqQs6av5uRJsTFwmRGwI';
+    const API_KEY = 'AIzaSyDzJXpWOEWnDvgDqQs6av5uRJsTFwmRGwI'; 
     var elGoogleApi = document.createElement('script');
     elGoogleApi.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}`;
     elGoogleApi.async = true;
