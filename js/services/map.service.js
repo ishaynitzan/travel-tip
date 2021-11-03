@@ -1,4 +1,4 @@
-import { API_KEY } from "../../private";
+import { API_KEY } from "../../private.js";
 
 export const mapService = {
     initMap,
