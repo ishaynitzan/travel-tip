@@ -3,7 +3,7 @@
 export const mapService = {
     initMap,
     addMarker,
-    panTo,
+    panTo
 }
 
 var gMap;
@@ -20,6 +20,7 @@ function initMap(lat = 32.0749831, lng = 34.9120554) {
             })
             addMapListener()
             console.log('Map!', gMap);
+            
         })
 }
 
@@ -69,7 +70,7 @@ function panTo(lat, lng) {
 
 function _connectGoogleApi() {
     if (window.google) return Promise.resolve()
-    const API_KEY = 'AIzaSyDzJXpWOEWnDvgDqQs6av5uRJsTFwmRGwI';
+    const API_KEY = 'AIzaSyDzJXpWOEWnDvgDqQs6av5uRJsTFwmRGwI'; 
     var elGoogleApi = document.createElement('script');
     elGoogleApi.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}`;
     elGoogleApi.async = true;
