@@ -11,7 +11,7 @@
 <body>
     <header class="flex space-between">
         <h1>TravelTip</h1>
-        <nav class="flex">
+        <nav class="flex justify-center align-center">
             <input type="text" class="search">
             <button onclick="onGetLocs()" class="btn-get-locs">Go</button>
 
@@ -19,13 +19,13 @@
         </nav>
     </header>
 
-    <main class="flex column">
+    <main class="flex column ">
         <div class="curr-loc flex space-between">
             <p>You are at: <span class="user-pos"></span></p>
             <p>Locations: <span class="locs"></span></p>
             <button>Copy Location</button>
         </div>
-        <div class="flex row space-between">
+        <div class="flex row">
             <div class="loc-info flex column">
                 <div class="weather">Weather</div>
                 <div class="loc-table">Location Table</div>

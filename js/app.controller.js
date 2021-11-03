@@ -14,6 +14,7 @@ function onInit() {
             console.log('Map is ready');
         })
         .catch(() => console.log('Error: cannot init map'));
+    mapService.addMapListener();
 }
 
 // This function provides a Promise API to the callback-based-api of getCurrentPosition

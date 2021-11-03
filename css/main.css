@@ -24,14 +24,33 @@ body{
     justify-content: space-between;
 }
 
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
 /* layout */
 
 .main-layout {
-
+width: 960px;
 }
 
 /* components */
 
-.weather, .loc-table {
+.weather{
+    width: 35vw;
     flex-grow: 1;
+    background-color:  rgb(17, 77, 190);
+}
+
+.loc-table{
+    width: 35vw;
+    flex-grow: 1;
+    background-color:  rgb(15, 66, 160);
+}
+
+.map{
+    width: 100%;
 }
