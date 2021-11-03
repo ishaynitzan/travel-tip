@@ -4,7 +4,6 @@ export const mapService = {
     initMap,
     addMarker,
     panTo,
-    addMapListener
 }
 
 var gMap;
@@ -19,6 +18,7 @@ function initMap(lat = 32.0749831, lng = 34.9120554) {
                 center: { lat, lng },
                 zoom: 15
             })
+            addMapListener()
             console.log('Map!', gMap);
         })
 }
