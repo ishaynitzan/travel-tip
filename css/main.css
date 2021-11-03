@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+   background-color: cornflowerblue;
+}
+
+/* HELPERS */
+
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.row {
+    flex-direction: row;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+/* layout */
+
+.main-layout {
+
+}
+
+/* components */
+
+.weather, .loc-table {
+    flex-grow: 1;
+}

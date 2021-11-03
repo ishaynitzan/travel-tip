@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
     <title>TravelTip</title>
 </head>
-<body>
-    <h1>TravelTip Starter</h1>
-    <div id="map" style="width: 100%; height: 400px;"></div>
-    <button onclick="onAddMarker()" class="btn-add-marker">Add Marker Speific Location</button>
-    <button onclick="onGetUserPos()" class="btn-user-pos">Get User Position</button>
-    <button onclick="onGetLocs()" class="btn-get-locs">Get Locations</button>
-    <button onclick="onPanTo()"class="btn-pan">Pan Map to Tokyo</button>
 
-    <p>You are at: <span class="user-pos"></span></p>
-    <p>Locations: <span class="locs"></span></p>
-    
+<body>
+    <header class="flex space-between">
+        <h1>TravelTip</h1>
+        <nav class="flex">
+            <input type="text" class="search">
+            <button onclick="onGetLocs()" class="btn-get-locs">Go</button>
+
+            <button onclick="onGetUserPos()" class="btn-user-pos">My Location</button>
+        </nav>
+    </header>
+
+    <main class="flex column">
+        <div class="curr-loc flex space-between">
+            <p>You are at: <span class="user-pos"></span></p>
+            <p>Locations: <span class="locs"></span></p>
+            <button>Copy Location</button>
+        </div>
+        <div class="flex row space-between">
+            <div class="loc-info flex column">
+                <div class="weather">Weather</div>
+                <div class="loc-table">Location Table</div>
+            </div>
+
+            <div class="map flex column">
+                <div id="map" style="width: 100%; height: 400px;"></div>
+
+                <button onclick="onAddMarker()" class="btn-add-marker">Add Marker Speific Location</button>
+                <button onclick="onPanTo()" class="btn-pan">Pan Map to Tokyo</button>
+            </div>
+        </div>
+    </main>
 
     <script type="module" src="js/app.controller.js"></script>
 </body>
+
 </html>
