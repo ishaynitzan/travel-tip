@@ -32,7 +32,7 @@ function addMapListener() {
       });
     
       infoWindow.open(gMap);
-      // Configure the click listener.
+    //   // Configure the click listener.
       gMap.addListener("click", (mapsMouseEvent) => {
         // Close the current InfoWindow.
         infoWindow.close();
