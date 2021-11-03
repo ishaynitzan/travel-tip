@@ -3,7 +3,7 @@ import { API_KEY } from "../../private.js";
 export const mapService = {
     initMap,
     addMarker,
-    panTo
+    panTo,
 }
 
 var gMap;
@@ -81,3 +81,10 @@ function _connectGoogleApi() {
         elGoogleApi.onerror = () => reject('Google script failed to load')
     })
 }
+
+// function getCurrentPosition {
+//  const locationButton= document.querySelector('.btn-user-pos')
+//  locationButton.classList.add("custom-map-control-button");
+
+ 
+// }
